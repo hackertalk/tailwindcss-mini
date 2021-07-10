@@ -1,0 +1,112 @@
+@import "customization";
+
+/* Background Attachment **********************************************/
+.bg-fixed  { background-attachment: fixed; }
+.bg-local  { background-attachment: local; }
+.bg-scroll { background-attachment: scroll; }
+
+/* Background Clip ****************************************************/
+.bg-clip-border  { background-clip: border-box; }
+.bg-clip-padding { background-clip: padding-box; }
+.bg-clip-content { background-clip: content-box; }
+.bg-clip-text    { background-clip: text; }
+
+/* Background Color ***************************************************/
+.bg-transparent { background-color: transparent; }
+
+@each $name, $color in $color-palette {
+  .bg-#{$name} {
+    --tw-bg-opacity: 1;
+    background-color: rgba($color, var(--tw-bg-opacity));
+  }
+}
+
+/* Background Opacity *************************************************/
+.bg-opacity-0   { --tw-bg-opacity: 0; }
+.bg-opacity-5   { --tw-bg-opacity: 0.05; }
+.bg-opacity-10  { --tw-bg-opacity: 0.1; }
+.bg-opacity-20  { --tw-bg-opacity: 0.2; }
+.bg-opacity-25  { --tw-bg-opacity: 0.25; }
+.bg-opacity-30  { --tw-bg-opacity: 0.3; }
+.bg-opacity-40  { --tw-bg-opacity: 0.4; }
+.bg-opacity-50  { --tw-bg-opacity: 0.5; }
+.bg-opacity-60  { --tw-bg-opacity: 0.6; }
+.bg-opacity-70  { --tw-bg-opacity: 0.7; }
+.bg-opacity-75  { --tw-bg-opacity: 0.75; }
+.bg-opacity-80  { --tw-bg-opacity: 0.8; }
+.bg-opacity-90  { --tw-bg-opacity: 0.9; }
+.bg-opacity-95  { --tw-bg-opacity: 0.95; }
+.bg-opacity-100 { --tw-bg-opacity: 1; }
+
+/* Background Origin **************************************************/
+.bg-origin-border { background-origin: border-box; }
+.bg-origin-padding { background-origin: padding-box; }
+.bg-origin-content { background-origin: content-box; }
+
+/* Background Position ************************************************/
+.bg-bottom       { background-position: bottom; }
+.bg-center       { background-position: center; }
+.bg-left         { background-position: left; }
+.bg-left-bottom  { background-position: left bottom; }
+.bg-left-top     { background-position: left top; }
+.bg-right        { background-position: right; }
+.bg-right-bottom { background-position: right bottom; }
+.bg-right-top    { background-position: right top; }
+.bg-top          { background-position: top; }
+
+/* Background Repeat **************************************************/
+.bg-repeat { background-repeat: repeat; }
+.bg-no-repeat { background-repeat: no-repeat; }
+.bg-repeat-x { background-repeat: repeat-x; }
+.bg-repeat-y { background-repeat: repeat-y; }
+.bg-repeat-round { background-repeat: round; }
+.bg-repeat-space { background-repeat: space; }
+
+/* Background Size ****************************************************/
+.bg-auto    { background-size: auto; }
+.bg-cover   { background-size: cover; }
+.bg-contain { background-size: contain; }
+
+/* Background Image ***************************************************/
+.bg-none { background-image: none; }
+//noinspection ALL
+.bg-gradient-to-t  { background-image: linear-gradient(to top, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-tr { background-image: linear-gradient(to top right, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-r  { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-b  { background-image: linear-gradient(to bottom, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-bl { background-image: linear-gradient(to bottom left, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-l  { background-image: linear-gradient(to left, var(--tw-gradient-stops)); }
+//noinspection ALL
+.bg-gradient-to-tl { background-image: linear-gradient(to top left, var(--tw-gradient-stops)); }
+
+/* Gradient Color Stops ***********************************************/
+.from-transparent {
+  --tw-gradient-from: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
+}
+.via-transparent {
+  --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0));
+}
+.to-transparent {
+  --tw-gradient-to: transparent;
+}
+
+@each $name, $color in $color-palette {
+  .from-#{$name} {
+    --tw-gradient-from: #{$color};
+    --tw-gradient-stops: #{var(--tw-gradient-from), var(--tw-gradient-to, rgba($color, 0))};
+  }
+  .via-#{$name} {
+    --tw-gradient-stops: #{var(--tw-gradient-from), $color, var(--tw-gradient-to, rgba($color, 0))};
+  }
+  .to-gray-200 {
+    --tw-gradient-to: #{$color};
+  }
+}
