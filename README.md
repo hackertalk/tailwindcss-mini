@@ -1,5 +1,5 @@
 ## 工具优先
-tailwindcss 的理念就是 Utility-First（工具优先），其本身提供了很好的 cli 操作，但是由于小程序端限制过多，比如样式不能包含小数点、斜杠、大量 css 选择器不能用等原因， tailwindcss 很难通过配置适配小程序端样式需求，由于 tailwindcss 常用类代码量不超过 2000 行，所以我们通过手动提取样式 + scss 工具累类实现 tailwindcss 类似的功能。
+tailwindcss 的理念就是 Utility-First（工具优先），其本身提供了很好的 cli 操作，但是由于小程序端限制过多，比如样式不能包含小数点、斜杠、大量 css 选择器不能用等原因， tailwindcss 很难通过配置适配小程序端样式需求，由于 tailwindcss 常用类代码不超过 2000 行，所以我们通过手动提取样式 + scss 工具累类实现 tailwindcss 类似的功能。
 
 ## 为什么使用这个方案：
 对比xx: 不支持自定义、不支持 divide 等样式，报错，可删减（按需使用），支持不同设计稿（375px or 750px）
