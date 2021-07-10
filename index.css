@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* fixed: 修复点击蓝色背景问题 */
 view, text, image, button, input, textarea, label, form, audio, video, canvas {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -29,6 +30,11 @@ view, text, image, button, input, textarea, label, form {
   --tw-ring-color: rgba(59, 130, 246, 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
+}
+
+/* 修复小程序按钮 border-none 无效的问题 */
+.btn-border-none, .btn-border-none::after {
+  border: none;
 }
 
 /* Container **********************************************************/
@@ -12558,11 +12564,6 @@ view, text, image, button, input, textarea, label, form {
   overflow: visible;
   clip: auto;
   white-space: normal;
-}
-
-/* 修复小程序按钮 border-none 无效的问题 */
-.btn-border-none, .btn-border-none::after {
-  border: none;
 }
 
 /*# sourceMappingURL=index.css.map */

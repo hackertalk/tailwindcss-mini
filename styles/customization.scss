@@ -1,3 +1,7 @@
+// $base-unit: 1rem; // 使用 rem 样式时开启
+// $base-unit: 32px; // 750px 设计稿开启
+$base-unit: 16px; // 375px 设计稿开启
+
 $color-palette: (
   'black': #000000,
   'white': #FFFFFF,
@@ -82,10 +86,6 @@ $color-palette: (
   'pink-800': #9D174D,
   'pink-900': #831843,
 );
-
-// $base-unit: 1rem; // 使用 rem 样式时开启
-// $base-unit: 32px; // 750px 设计稿开启
-$base-unit: 16px; // 375px 设计稿开启
 
 $spacing: (
   '0': 0,
